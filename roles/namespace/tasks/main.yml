@@ -1,0 +1,17 @@
+---
+- name: Check if the Argocd namespace exist
+  shell: kubectl get ns argocd
+  register: namespace_info
+  ignore_errors: true
+
+# - name: debug
+#   debug:
+#     msg: "{{ namespace_info }}"
+
+- name: Create namespace if not exist
+  shell: kubectl create ns argocd
+  when: namespace_info.rc != 0
+
+
+
+

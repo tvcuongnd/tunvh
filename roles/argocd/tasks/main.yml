@@ -1,0 +1,14 @@
+---
+- name: copy file to remote
+  copy:
+    src: install-argocd.yml
+    dest: /tmp/install-argocd.yml
+  register: copy_file_argocd
+
+- name: debug
+  debug:
+    msg: "{{ copy_file_argocd }}"
+
+- name: Apply install-argocd.yml
+  shell: kubectl apply -f /tmp/install-argocd.yml -n argocd
+  when: copy_file_argocd.changed
