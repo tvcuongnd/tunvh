@@ -18,4 +18,4 @@ data:
   APP_ENV: "production"
   LOG_LEVEL: "info"
   TIMEOUT: "50000s"
-  LOG_LEVEL2: "info"
+  LOG_LEVEL2: "312313123"
