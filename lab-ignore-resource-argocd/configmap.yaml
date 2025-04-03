@@ -15,7 +15,7 @@ metadata:
   name: vi-du-2
   namespace: default
 data:
-  APP_ENV: "A"
+  APP_ENV: "111"
   LOG_LEVEL: "info"
-  TIMEOUT: "50000s"
+  TIMEOUT: "111"
   LOG_LEVEL2: "312313123"
