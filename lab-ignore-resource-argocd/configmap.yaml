@@ -6,7 +6,7 @@ metadata:
 data:
   APP_ENV: "production"
   LOG_LEVEL: "info"
-  TIMEOUT: "3000s"
+  TIMEOUT: "3s"
 --- 
 apiVersion: v1
 kind: ConfigMap
