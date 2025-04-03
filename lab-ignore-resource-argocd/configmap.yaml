@@ -7,3 +7,13 @@ data:
   APP_ENV: "production"
   LOG_LEVEL: "info"
   TIMEOUT: "300s"
+--- 
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vi-du-2
+  namespace: default
+data:
+  APP_ENV: "production"
+  LOG_LEVEL: "info"
+  TIMEOUT: "300s"
