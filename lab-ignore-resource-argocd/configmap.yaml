@@ -6,4 +6,4 @@ metadata:
 data:
   APP_ENV: "production"
   LOG_LEVEL: "info"
-  TIMEOUT: "30s"
+  TIMEOUT: "300s"
