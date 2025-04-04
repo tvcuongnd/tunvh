@@ -11,4 +11,5 @@ commonLabels:
 resources:
 - configmap-1.yaml
 - configmap-2.yaml
+- configmap-3.yaml
 - deployment.yaml
