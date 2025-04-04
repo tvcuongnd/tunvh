@@ -15,27 +15,14 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx:1.25  # bạn có thể đổi tag này nếu muốn
+          image: nginx:1.25
           ports:
             - containerPort: 80
-          env:
-            - name: APP_ENV
-              valueFrom:
-                configMapKeyRef:
-                  name: vi-du-1
-                  key: APP_ENV
-            - name: LOG_LEVEL
-              valueFrom:
-                configMapKeyRef:
-                  name: vi-du-1
-                  key: LOG_LEVEL
-            - name: TIMEOUT
-              valueFrom:
-                configMapKeyRef:
-                  name: vi-du-1
-                  key: TIMEOUT
-            - name: LOG_LEVEL2
-              valueFrom:
-                configMapKeyRef:
-                  name: vi-du-1
-                  key: LOG_LEVEL2
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config     # đường dẫn trong container để mount ConfigMap
+              readOnly: true
+      volumes:
+        - name: config-volume
+          configMap:
+            name: vi-du-1
