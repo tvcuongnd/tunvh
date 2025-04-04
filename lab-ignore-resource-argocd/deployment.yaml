@@ -29,14 +29,6 @@ spec:
           #   - name: config-volume
           #     mountPath: /etc/config     # đường dẫn trong container để mount ConfigMap
           #     readOnly: true
-        - name: ubuntu
-          image: nginx:1.25
-          ports:
-            - containerPort: 8080
-          volumeMounts:
-            - name: config-volume
-              mountPath: /etc/config     # đường dẫn trong container để mount ConfigMap
-              readOnly: true
 
       volumes:
         - name: config-volume
