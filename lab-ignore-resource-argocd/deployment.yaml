@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vi-du-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vi-du
+  template:
+    metadata:
+      labels:
+        app: vi-du
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.25  # bạn có thể đổi tag này nếu muốn
+          ports:
+            - containerPort: 80
+          env:
+            - name: APP_ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: vi-du-1
+                  key: APP_ENV
+            - name: LOG_LEVEL
+              valueFrom:
+                configMapKeyRef:
+                  name: vi-du-1
+                  key: LOG_LEVEL
+            - name: TIMEOUT
+              valueFrom:
+                configMapKeyRef:
+                  name: vi-du-1
+                  key: TIMEOUT
+            - name: LOG_LEVEL2
+              valueFrom:
+                configMapKeyRef:
+                  name: vi-du-1
+                  key: LOG_LEVEL2
