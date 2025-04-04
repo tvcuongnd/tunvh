@@ -10,3 +10,4 @@ commonLabels:
 
 resources:
 - configmap.yaml
+- deployment.yaml
