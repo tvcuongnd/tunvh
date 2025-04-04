@@ -9,5 +9,5 @@ commonLabels:
   app: hello
 
 resources:
-- configmap.yaml
+- configmap-1.yaml
 - deployment.yaml

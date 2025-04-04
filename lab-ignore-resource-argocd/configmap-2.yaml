@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vi-du-1
+  namespace: default
+data:
+  APP_ENV: "production"
+  LOG_LEVEL: "info"
+  TIMEOUT: "5s"
+  LOG_LEVEL2: "info1"
+--- 
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vi-du-2
+  namespace: default
+data:
+  APP_ENV: "111"
+  LOG_LEVEL: "info"
+  TIMEOUT: "111"
+  LOG_LEVEL2: "312313123"
