@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: vi-du-1
+  name: vi-du-10
   namespace: default
 data:
   APP_ENV: "production1"
