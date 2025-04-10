@@ -8,3 +8,4 @@ data:
   LOG_LEVEL: "info"
   TIMEOUT: "5s"
   LOG_LEVEL2: "info1"
+  LOG_LEVEL3: "trong-ext"
