@@ -4,4 +4,4 @@ metadata:
   name: vi-du-1
   namespace: default
 data:
-  APP_ENV: "production"
+  APP_ENV: "production1"
